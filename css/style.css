@@ -1,0 +1,85 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+body {
+	user-select: none;
+	font-size: 8rem;
+	text-align: center;
+	overflow: hidden;
+}
+
+#chessTable {
+	position: absolute;
+	min-height: 80vh;
+	max-height: 80vw;
+	min-width: 80vh;
+	max-width: 80vh;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	border: 2px solid black;
+}
+
+.item {
+	position: relative;
+	line-height: 0;
+}
+
+:root {
+	--special-black: rgb(143 157 173);
+	--special-white: rgb(186 195 207);
+}
+
+.on:nth-child(2n+1) {
+	background-color: var(--special-white);
+}
+
+.off:nth-child(2n) {
+	background-color: var(--special-white);
+}
+
+.on:nth-child(2n) {
+	background-color: var(--special-black);
+}
+
+.off:nth-child(2n+1) {
+	background-color: var(--special-black);
+}
+
+
+img {
+	position: absolute;
+	height: 80%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 9999;
+}
+
+.play {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	z-index: 999;
+}
+
+.play::after {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: rgba(0, 255, 0, .7);
+	opacity: .5;
+}
