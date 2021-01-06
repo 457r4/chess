@@ -19,10 +19,6 @@ body {
 
 #chessTable {
 	position: absolute;
-	min-height: 80vh;
-	max-height: 80vw;
-	min-width: 80vh;
-	max-width: 80vh;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
